@@ -78,22 +78,22 @@ p {
     background-color: #f093fb;
 }
 
- /* Gallery page images */
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;         /* space between images */
+  gap: 20px;
   justify-content: center;
   margin-top: 20px;
 }
 
 .gallery img {
-  width: 350px;       /* make this wider as you like */
-  max-width: 100%;    /* ensures images shrink on small screens */
-  height: auto;       /* keeps the aspect ratio */
-  border-radius: 8px; /* rounded corners */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* subtle shadow */
+  width: 400px;       /* make them wider */
+  max-width: 100%;    /* responsive */
+  height: auto;       /* keep ratio */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
+
 
 
 
