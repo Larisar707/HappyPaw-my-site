@@ -78,8 +78,8 @@ p {
     background-color: #f093fb;
 }
 
-/* Image gallery */
- .gallery {
+ /* Image gallery */
+.gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;      /* space between images */
@@ -88,6 +88,8 @@ p {
 }
 
 .gallery img {
+  width: 300px;       /* make this wider as you like, e.g., 350px or 400px */
+  height: auto;       /* keeps aspect ratio */
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
