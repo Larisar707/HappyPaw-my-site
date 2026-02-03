@@ -90,7 +90,7 @@ p {
 .gallery img {
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  height: 250px;       /* bigger height */
+  height: 300px;       /* bigger height */
   width: auto;          /* maintain aspect ratio */
   object-fit: cover;   /* crops if necessary, keeps image proportional */
 }
