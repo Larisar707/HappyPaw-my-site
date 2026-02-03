@@ -78,20 +78,23 @@ p {
     background-color: #f093fb;
 }
 
- /* Image gallery */
-.gallery img {
-  width: 450px !important;   /* adjust as needed */
-  height: auto !important;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+ /* Gallery page images */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;         /* space between images */
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .gallery img {
-  width: 300px;       /* make this wider as you like, e.g., 350px or 400px */
-  height: auto;       /* keeps aspect ratio */
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  width: 350px;       /* make this wider as you like */
+  max-width: 100%;    /* ensures images shrink on small screens */
+  height: auto;       /* keeps the aspect ratio */
+  border-radius: 8px; /* rounded corners */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* subtle shadow */
 }
+
 
 
 /* Testimonials */
