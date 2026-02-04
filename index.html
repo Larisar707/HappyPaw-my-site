@@ -5,6 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HappyPaws Transport - Home</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Button Style (already used) */
+    .button {
+      background-color: #ff69b4;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .button:hover {
+      background-color: #e75480;
+    }
+
+    /* Bottom-left video container */
+    .bottom-left-video {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 250px; /* Adjust size */
+      height: 140px; /* 16:9 ratio for 250px width */
+      z-index: 1000;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .bottom-left-video iframe {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
 <body>
 
@@ -43,6 +77,15 @@
     <p>HappyPaws Transport provides safe and comfortable travel for dogs of all sizes and breeds.</p>
     <a href="contact.html" class="button">Book a Transport</a>
   </section>
+
+  <!-- BOTTOM-LEFT VIDEO -->
+  <div class="bottom-left-video">
+    <iframe src="https://www.youtube.com/embed/cGoQIVVS-Mo" 
+            title="HappyPaws Transport Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+    </iframe>
+  </div>
 
   <footer style="text-align:center; margin-top:40px;">
     <p>© 2026 HappyPaws Transport. All rights reserved.</p>
