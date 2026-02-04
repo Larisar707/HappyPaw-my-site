@@ -6,7 +6,7 @@
   <title>HappyPaws Transport - Home</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Button Style (already used) */
+    /* Button Style */
     .button {
       background-color: #ff69b4;
       color: white;
@@ -16,33 +16,46 @@
       font-weight: bold;
       transition: background 0.3s;
     }
-
     .button:hover {
       background-color: #e75480;
     }
 
-    /* Bottom-left video container */
+    /* Bottom-left video for desktop */
     .bottom-left-video {
       position: fixed;
-      bottom: 20px;
+      bottom: 120px;
       left: 20px;
-      width: 250px; /* Adjust size */
-      height: 140px; /* 16:9 ratio for 250px width */
+      width: 500px;
+      height: 280px;
       z-index: 1000;
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
-
     .bottom-left-video iframe {
       width: 100%;
       height: 100%;
+    }
+
+    /* Mobile adjustment: move video into normal flow */
+    @media (max-width: 768px) {
+      .bottom-left-video {
+        position: relative; /* not fixed */
+        bottom: auto;
+        left: auto;
+        width: 100%; /* full width */
+        height: auto;
+        margin: 20px 0;
+      }
+      .bottom-left-video iframe {
+        aspect-ratio: 16/9;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER WITH GRADIENT AND LIGHTER PINK TOP -->
+  <!-- HEADER WITH GRADIENT AND LOGO -->
   <header style="
       text-align:center; 
       margin-top:0; 
@@ -51,19 +64,15 @@
       padding-bottom:20px; 
       position:relative;
   ">
-    
     <!-- LOGO TOP-LEFT -->
-    <img 
-      src="images/transport-logo.png" 
-      alt="Transport Logo"
-      style="position:absolute; top:10px; left:10px; height:80px;"
-    >
-
+    <img src="images/transport-logo.png" alt="Transport Logo"
+         style="position:absolute; top:10px; left:10px; height:80px;">
     <h1>HappyPaws Transport</h1>
     <p>Safe and comfortable transport for your furry friends</p>
     <img src="images/shiba-inu.jpg" alt="Dog" width="400">
   </header>
 
+  <!-- NAVIGATION -->
   <nav style="text-align:center; margin-top:20px;">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -72,22 +81,21 @@
     <a href="contact.html">Contact</a>
   </nav>
 
+  <!-- WELCOME SECTION -->
   <section style="text-align:center; margin-top:40px;">
     <h2>Welcome!</h2>
     <p>HappyPaws Transport provides safe and comfortable travel for dogs of all sizes and breeds.</p>
     <a href="contact.html" class="button">Book a Transport</a>
   </section>
 
- <!-- BOTTOM-LEFT VIDEO, bigger size -->
-<div class="bottom-left-video" style="bottom:120px; width:500px; height:280px;">
-  <iframe src="https://www.youtube.com/embed/cGoQIVVS-Mo" 
-          title="HappyPaws Transport Video" frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen>
-  </iframe>
-</div>
-
-
+  <!-- RESPONSIVE VIDEO -->
+  <div class="bottom-left-video">
+    <iframe src="https://www.youtube.com/embed/cGoQIVVS-Mo" 
+            title="HappyPaws Transport Video" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+    </iframe>
+  </div>
 
   <footer style="text-align:center; margin-top:40px;">
     <p>© 2026 HappyPaws Transport. All rights reserved.</p>
@@ -95,6 +103,7 @@
 
 </body>
 </html>
+
 
 
 
