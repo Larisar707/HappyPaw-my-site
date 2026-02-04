@@ -66,10 +66,12 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
-    .service-card h3 {
-      margin: 10px 0;
-      font-size: 1.3em;
-    }
+ .service-card h3::before {
+    content: "🐾 ";
+    font-size: 1.3em;
+    color: #ff69b4 !important; /* force pink color */
+}
+
 
  /* Paw icon before each service title */
 .service-card h3::before {
