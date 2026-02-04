@@ -1,19 +1,121 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HappyPaws Transport - Home</title>
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    header img.logo {
+      height: 80px;
+      margin-right: 25px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      color: #666;
+    }
+
+    /* NAVIGATION */
+    nav {
+      background-color: #0b5ed7;
+      padding: 12px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: #ffffff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* HERO SECTION */
+    section.hero {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #ffffff;
+    }
+
+    section.hero img {
+      max-width: 400px;
+      width: 100%;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 25px;
+      background-color: #0b5ed7;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background-color: #084298;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #eeeeee;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
 </head>
+
 <body>
-  <header style="text-align:center; margin-top:30px;">
-    <h1>HappyPaws Transport</h1>
-    <p>Safe and comfortable transport for your furry friends</p>
-    <img src="images/shiba-inu.jpg" alt="Dog" width="400">
+
+  <!-- HEADER WITH LOGO LEFT -->
+  <header>
+    <a href="index.html">
+      <img 
+        src="images/transport-logo.png" 
+        alt="Transport - Local & International for Dogs and Cats" 
+        class="logo"
+      >
+    </a>
+
+    <div>
+      <h1>HappyPaws Transport</h1>
+      <p>Safe and comfortable transport for your furry friends</p>
+    </div>
   </header>
 
-  <nav style="text-align:center; margin-top:20px;">
+  <!-- NAVIGATION -->
+  <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="gallery.html">Gallery</a>
@@ -21,16 +123,27 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <section style="text-align:center; margin-top:40px;">
+  <!-- MAIN CONTENT -->
+  <section class="hero">
     <h2>Welcome!</h2>
-    <p>HappyPaws Transport provides safe and comfortable travel for dogs of all sizes and breeds.</p>
+    <p>
+      HappyPaws Transport provides safe and comfortable local and international
+      travel for dogs and cats of all sizes and breeds.
+    </p>
+
+    <img src="images/shiba-inu.jpg" alt="Happy dog">
+
+    <br>
     <a href="contact.html" class="button">Book a Transport</a>
   </section>
 
-  <footer style="text-align:center; margin-top:40px;">
+  <!-- FOOTER -->
+  <footer>
     <p>© 2026 HappyPaws Transport. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
+
 
 
