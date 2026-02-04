@@ -25,28 +25,26 @@
       text-align: center;
       margin: 20px 0;
       padding: 10px 0;
-      background-color: #fff0f5; /* subtle light pink background */
+      background-color: #fff0f5;
       border-radius: 5px;
     }
 
     nav a {
-      color: #ff69b4;       /* visible pink nav links */
+      color: #ff69b4;
       font-weight: bold;
       text-decoration: none;
       margin: 0 10px;
     }
 
     nav a:hover {
-      color: #e75480;       /* darker pink on hover */
+      color: #e75480;
     }
 
-    /* Section titles */
     h2 {
       text-align: center;
       margin-top: 40px;
     }
 
-    /* Container for service cards */
     .services-container {
       display: flex;
       flex-wrap: wrap;
@@ -55,7 +53,6 @@
       margin: 40px 20px;
     }
 
-    /* Individual service card */
     .service-card {
       background-color: #fff0f5;
       border-radius: 10px;
@@ -74,20 +71,16 @@
     .service-card h3 {
       margin: 10px 0;
       font-size: 1.3em;
-    }
-
-    /* Paw icon span */
-    .paw {
-      color: #ff69b4; /* brand pink */
-      margin-right: 5px;
-      font-size: 1.3em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
     }
 
     .service-card p {
       margin: 10px 0;
     }
 
-    /* Buttons */
     .button {
       background-color: #ff69b4;
       color: white;
@@ -102,7 +95,6 @@
       background-color: #e75480;
     }
 
-    /* Footer */
     footer {
       text-align: center;
       padding: 20px;
@@ -110,27 +102,31 @@
       background-color: #ffd6e0;
     }
 
-    /* Responsive: stack cards on mobile */
     @media (max-width: 768px) {
       .services-container {
         flex-direction: column;
         align-items: center;
       }
       .service-card {
-        width: 90%; /* adjust width for mobile */
+        width: 90%;
       }
+    }
+
+    /* SVG paw size */
+    .paw-icon {
+      width: 24px;
+      height: 24px;
+      fill: #ff69b4; /* brand pink */
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <h1>HappyPaws Transport</h1>
     <p>Safe and comfortable transport for your furry friends</p>
   </header>
 
-  <!-- Navigation -->
   <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -139,31 +135,45 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- Services Section -->
   <section>
     <h2>Our Services</h2>
     <div class="services-container">
       <div class="service-card">
-        <h3><span class="paw">🐾</span>Local Transport</h3>
+        <h3>
+          <!-- SVG Paw Icon -->
+          <svg class="paw-icon" viewBox="0 0 512 512">
+            <path d="M256 256c28-28 64-36 96-40 32-4 64 0 80 16s20 48 16 80c-4 32-12 68-40 96s-64 36-96 40c-32 4-64 0-80-16s-20-48-16-80c4-32 12-68 40-96zM128 128c0 44.2 35.8 80 80 80s80-35.8 80-80-35.8-80-80-80-80 35.8-80 80zm256 0c0 44.2 35.8 80 80 80s80-35.8 80-80-35.8-80-80-80-80 35.8-80 80zm-256 256c0 44.2 35.8 80 80 80s80-35.8 80-80-35.8-80-80-80-80 35.8-80 80zm256 0c0 44.2 35.8 80 80 80s80-35.8 80-80-35.8-80-80-80-80 35.8-80 80z"/>
+          </svg>
+          Local Transport
+        </h3>
         <p>Short-distance transport for dogs and cats within your city, safe and comfortable.</p>
         <a href="contact.html" class="button">Book Now</a>
       </div>
 
       <div class="service-card">
-        <h3><span class="paw">🐾</span>Long-Distance Transport</h3>
+        <h3>
+          <svg class="paw-icon" viewBox="0 0 512 512">
+            <path d="M256 256c28-28 64-36 96-40 32-4 64 0 80 16s20 48 16 80c-4 32-12 68-40 96s-64 36-96 40c-32 4-64 0-80-16s-20-48-16-80c4-32 12-68 40-96zM128 128c0 44.2 35.8 80 80 80s80-35.8 80-80-35.8-80-80-80-80 35.8-80 80zm256 0c0 44.2 35.8 80 80 80s80-35.8 80-80-35.8-80-80-80-80 35.8-80 80zm-256 256c0 44.2 35.8 80 80 80s80-35.8 80-80-35.8-80-80-80-80 35.8-80 80zm256 0c0 44.2 35.8 80 80 80s80-35.8 80-80-35.8-80-80-80-80 35.8-80 80z"/>
+          </svg>
+          Long-Distance Transport
+        </h3>
         <p>Reliable long-distance travel, with attentive care for all breeds and sizes.</p>
         <a href="contact.html" class="button">Book Now</a>
       </div>
 
       <div class="service-card">
-        <h3><span class="paw">🐾</span>Personalized Care</h3>
+        <h3>
+          <svg class="paw-icon" viewBox="0 0 512 512">
+            <path d="M256 256c28-28 64-36 96-40 32-4 64 0 80 16s20 48 16 80c-4 32-12 68-40 96s-64 36-96 40c-32 4-64 0-80-16s-20-48-16-80c4-32 12-68 40-96zM128 128c0 44.2 35.8 80 80 80s80-35.8 80-80-35.8-80-80-80-80 35.8-80 80zm256 0c0 44.2 35.8 80 80 80s80-35.8 80-80-35.8-80-80-80-80 35.8-80 80zm-256 256c0 44.2 35.8 80 80 80s80-35.8 80-80-35.8-80-80-80-80 35.8-80 80zm256 0c0 44.2 35.8 80 80 80s80-35.8 80-80-35.8-80-80-80-80 35.8-80 80z"/>
+          </svg>
+          Personalized Care
+        </h3>
         <p>Custom travel experience with individual attention to your pet’s needs.</p>
         <a href="contact.html" class="button">Book Now</a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>© 2026 HappyPaws Transport. All rights reserved.</p>
   </footer>
