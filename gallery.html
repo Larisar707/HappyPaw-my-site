@@ -1,43 +1,110 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HappyPaws Transport - Gallery</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HappyPaws Transport - Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(to bottom, #ffd6e0, #ff69b4, #e75480);
+    }
+
+    nav {
+      text-align: center;
+      margin: 20px 0;
+      padding: 10px 0;
+      background-color: #fff0f5;
+      border-radius: 5px;
+    }
+
+    nav a {
+      color: #ff69b4;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    nav a:hover {
+      color: #e75480;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    /* Gallery grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin: 40px 20px;
+      justify-items: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      background-color: #ffd6e0;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>HappyPaws Transport</h1>
-        <p>Safe  and  comfortable  transport  for  your  furry  friends</p>
-    </header>
 
- <nav>
+  <header>
+    <h1>HappyPaws Transport</h1>
+    <p>Safe and comfortable transport for your furry friends</p>
+  </header>
+
+  <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="gallery.html">Gallery</a>
     <a href="testimonials.html">Testimonials</a>
     <a href="contact.html">Contact</a>
-</nav>
+  </nav>
 
+  <section>
+    <h2>Our Happy Paws</h2>
+    <div class="gallery">
+      <img src="images/dog3.jpg" alt="Dog 3">
+      <img src="images/dog4.jpg" alt="Dog 4">
+      <img src="images/dog5.jpg" alt="Dog 5">
+      <img src="images/dog7.jpg" alt="Dog 7">
+      <img src="images/dog8.jpg" alt="Dog 8">
+      <img src="images/dog9.jpg" alt="Dog 9">
+    </div>
+  </section>
 
- <section>
-  <h2>Our Happy Paws</h2>
-  <div class="gallery">
-    <img src="images/dog3.jpg" alt="Dog 3">
-    <img src="images/dog4.jpg" alt="Dog 4">
-    <img src="images/dog5.jpg" alt="Dog 5">
-    <img src="images/dog7.jpg" alt="Dog 7">
-    <img src="images/dog8.jpg" alt="Dog 8">
-    <img src="images/dog9.jpg" alt="Dog 9">
-  </div>
-</section>
+  <footer>
+    <p>© 2026 HappyPaws Transport. All rights reserved.</p>
+  </footer>
 
-
-
-
-    <footer>
-        <p>© 2026 HappyPaws Transport. All rights reserved.</p>
-    </footer>
 </body>
 </html>
+
