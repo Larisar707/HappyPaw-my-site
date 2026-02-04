@@ -10,113 +10,95 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f5f5f5; /* light gray background for contrast */
+      background-color: #fff;
       color: #333;
     }
 
     header {
       text-align: center;
-      padding: 30px 20px;
-      background-color: #ff69b4; /* bold pink header */
-      color: white;
+      padding: 20px;
+      background: linear-gradient(to bottom, #ffd6e0, #ff69b4, #e75480);
     }
 
     nav {
       text-align: center;
-      margin: 0;
+      margin: 20px 0;
       padding: 10px 0;
-      background-color: #333; /* dark nav for contrast */
-    }
-
-    nav a {
-      color: #fff;
-      font-weight: bold;
-      text-decoration: none;
-      margin: 0 15px;
-      padding: 5px 10px;
-      transition: background 0.3s;
-    }
-
-    nav a:hover {
-      background-color: #ff69b4;
-      color: white;
+      background-color: #fff0f5;
       border-radius: 5px;
     }
 
-    section h2 {
+    nav a {
+      color: #ff69b4;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    nav a:hover {
+      color: #e75480;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
       text-align: center;
-      margin-top: 40px;
-      color: #e75480; /* darker pink */
+      margin-bottom: 50px;
+      color: #e75480;
       font-size: 2em;
     }
 
-    /* Testimonials container with contrasting cards */
-    .testimonials-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-      margin: 40px 20px;
-    }
-
-    .testimonial-card {
-      background-color: #fff; /* white cards for contrast */
-      border-left: 6px solid #ff69b4; /* colored accent bar */
-      border-radius: 10px;
-      padding: 25px 20px;
-      width: 320px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    /* Testimonials without cards */
+    .testimonial {
       position: relative;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .testimonial-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-    }
-
-    /* Quote style */
-    .testimonial-card p {
       font-style: italic;
-      font-size: 1.1em;
-      margin-bottom: 20px;
+      font-size: 1.2em;
+      margin-bottom: 50px;
+      padding-left: 40px;
     }
 
-    .testimonial-card strong {
-      display: block;
-      text-align: right;
-      color: #ff69b4;
-      font-size: 1em;
-    }
-
-    /* Optional quotation marks */
-    .testimonial-card::before {
-      content: "“";
-      font-size: 3em;
-      color: #ff69b4;
+    .testimonial::before {
+      content: "🐾"; /* pink paw icon */
       position: absolute;
-      top: 10px;
-      left: 10px;
+      left: 0;
+      top: 0;
+      font-size: 2em;
+      color: #ff69b4;
+    }
+
+    .testimonial strong {
+      display: block;
+      margin-top: 10px;
+      color: #ff69b4;
+      font-weight: normal;
+      font-size: 1em;
+      text-align: right;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 0 10px;
+      }
+      .testimonial {
+        font-size: 1.1em;
+        padding-left: 35px;
+      }
+      .testimonial::before {
+        font-size: 1.8em;
+      }
     }
 
     footer {
       text-align: center;
       padding: 20px;
       margin-top: 40px;
-      background-color: #333;
-      color: white;
+      background-color: #ffd6e0;
     }
 
-    /* Responsive: stack on mobile */
-    @media (max-width: 768px) {
-      .testimonials-container {
-        flex-direction: column;
-        align-items: center;
-      }
-      .testimonial-card {
-        width: 90%;
-      }
-    }
   </style>
 </head>
 <body>
@@ -136,20 +118,22 @@
 
   <section>
     <h2>What Our Clients Say</h2>
-    <div class="testimonials-container">
-      <div class="testimonial-card">
-        <p>"HappyPaws Transport made my dog’s trip stress-free and safe. Highly recommend!"</p>
-        <strong>- Sarah M.</strong>
-      </div>
-      <div class="testimonial-card">
-        <p>"Excellent service, very caring staff, and my dog loved the ride!"</p>
-        <strong>- James K.</strong>
-      </div>
-      <div class="testimonial-card">
-        <p>"They treat every pet like family. Fantastic experience and friendly staff!"</p>
-        <strong>- Emily R.</strong>
-      </div>
+
+    <div class="testimonial">
+      "HappyPaws Transport made my dog’s trip stress-free and safe. Highly recommend!"
+      <strong>- Sarah M.</strong>
     </div>
+
+    <div class="testimonial">
+      "Excellent service, very caring staff, and my dog loved the ride!"
+      <strong>- James K.</strong>
+    </div>
+
+    <div class="testimonial">
+      "They treat every pet like family. Fantastic experience and friendly staff!"
+      <strong>- Emily R.</strong>
+    </div>
+
   </section>
 
   <footer>
@@ -158,5 +142,6 @@
 
 </body>
 </html>
+
 
 
