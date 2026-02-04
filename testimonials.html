@@ -10,77 +10,101 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fff;
+      background-color: #f5f5f5; /* light gray background for contrast */
+      color: #333;
     }
 
     header {
       text-align: center;
-      padding: 20px;
-      background: linear-gradient(to bottom, #ffd6e0, #ff69b4, #e75480);
+      padding: 30px 20px;
+      background-color: #ff69b4; /* bold pink header */
+      color: white;
     }
 
     nav {
       text-align: center;
-      margin: 20px 0;
+      margin: 0;
       padding: 10px 0;
-      background-color: #fff0f5;
-      border-radius: 5px;
+      background-color: #333; /* dark nav for contrast */
     }
 
     nav a {
-      color: #ff69b4;
+      color: #fff;
       font-weight: bold;
       text-decoration: none;
-      margin: 0 10px;
+      margin: 0 15px;
+      padding: 5px 10px;
+      transition: background 0.3s;
     }
 
     nav a:hover {
-      color: #e75480;
+      background-color: #ff69b4;
+      color: white;
+      border-radius: 5px;
     }
 
-    h2 {
+    section h2 {
       text-align: center;
       margin-top: 40px;
+      color: #e75480; /* darker pink */
+      font-size: 2em;
     }
 
-    /* Testimonials container */
+    /* Testimonials container with contrasting cards */
     .testimonials-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 25px;
       margin: 40px 20px;
     }
 
     .testimonial-card {
-      background-color: #fff0f5;
+      background-color: #fff; /* white cards for contrast */
+      border-left: 6px solid #ff69b4; /* colored accent bar */
       border-radius: 10px;
-      padding: 20px;
-      width: 300px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 25px 20px;
+      width: 320px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      position: relative;
       transition: transform 0.3s, box-shadow 0.3s;
-      text-align: center;
     }
 
     .testimonial-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
     }
 
+    /* Quote style */
     .testimonial-card p {
       font-style: italic;
-      margin-bottom: 15px;
+      font-size: 1.1em;
+      margin-bottom: 20px;
     }
 
     .testimonial-card strong {
+      display: block;
+      text-align: right;
       color: #ff69b4;
+      font-size: 1em;
+    }
+
+    /* Optional quotation marks */
+    .testimonial-card::before {
+      content: "“";
+      font-size: 3em;
+      color: #ff69b4;
+      position: absolute;
+      top: 10px;
+      left: 10px;
     }
 
     footer {
       text-align: center;
       padding: 20px;
       margin-top: 40px;
-      background-color: #ffd6e0;
+      background-color: #333;
+      color: white;
     }
 
     /* Responsive: stack on mobile */
@@ -121,6 +145,10 @@
         <p>"Excellent service, very caring staff, and my dog loved the ride!"</p>
         <strong>- James K.</strong>
       </div>
+      <div class="testimonial-card">
+        <p>"They treat every pet like family. Fantastic experience and friendly staff!"</p>
+        <strong>- Emily R.</strong>
+      </div>
     </div>
   </section>
 
@@ -130,4 +158,5 @@
 
 </body>
 </html>
+
 
