@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -35,14 +35,14 @@
 
         <!-- Instruction line -->
         <p class="contact-instruction">
-            Or you can send us a brief message so we can assist you.
+            You can send us a brief message so we can assist you.
         </p>
 
         <!-- Contact Form -->
         <form action="https://formspree.io/f/mjgegzjb" method="POST" class="contact-form">
 
-            <!-- Redirect after submit -->
-            <input type="hidden" name="_redirect" value="https://larisar707.github.io/HappyPaw-my-site/thankyou.html">
+            <!-- Redirect after successful submission -->
+            <input type="hidden" name="_next" value="https://larisar707.github.io/HappyPaw-my-site/thankyou.html">
 
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -61,6 +61,13 @@
     <footer>
         <p>© 2026 HappyPaws Transport. All rights reserved.</p>
     </footer>
+
+    <!-- Prevent form resubmission on back button -->
+    <script>
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+    </script>
 
 </body>
 </html>
