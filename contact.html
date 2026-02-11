@@ -41,7 +41,8 @@
 
         <!-- Contact Form -->
  <form action="https://formspree.io/f/mjgegzjb" method="POST">
-    <p>You can send us a brief message so we can assist you.</p>
+    <!-- This tells Formspree where to go after submission -->
+    <input type="hidden" name="_next" value="thankyou.html">
 
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -54,6 +55,7 @@
 
     <button type="submit" class="button">Send Message</button>
 </form>
+
 
     </section>
 
