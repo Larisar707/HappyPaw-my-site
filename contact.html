@@ -2,74 +2,76 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HappyPaws Transport - Contact</title>
+    <title>Contact Us - HappyPaws Transport</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Contact page specific styling */
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column; /* vertical layout */
+            gap: 15px; /* spacing between inputs */
+        }
+        form label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        form input, form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>HappyPaws Transport</h1>
-        <p>Safe and comfortable transport for your furry friends</p>
-    </header>
+<header>
+    <h1>HappyPaws Transport</h1>
+    <p>Safe and comfortable transport for your furry friends</p>
+</header>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact</a>
+</nav>
 
-    <!-- Contact Section -->
-    <section>
-        <h2>Contact Us</h2>
+<section>
+    <h2>Contact Us</h2>
 
-        <!-- Contact Info -->
-        <div class="contact-info">
-            <p>Phone: <a href="tel:+13477223531">(347) 722-3531</a></p>
-            <p>Email: <a href="mailto:larisa.slizewski707.com">larisa.slizewski707.com</a></p>
-            <a href="tel:+13477223531" class="button">Call Us</a>
-        </div>
+    <form action="https://formspree.io/f/mjgegzjb" method="POST">
+        <!-- Redirect after submit -->
+        <input type="hidden" name="_next" value="thankyou.html">
 
-        <!-- Instruction -->
-        <p class="contact-instruction">
-            You can send us a brief message so we can assist you.
-        </p>
+        <p>Or, you can send us a brief message so we can assist you.</p>
 
-        <!-- Contact Form -->
- <form action="https://formspree.io/f/mjgegzjb" method="POST">
-    <!-- This tells Formspree where to go after submission -->
-    <input type="hidden" name="_next" value="thankyou.html">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
 
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="button">Send Message</button>
+    </form>
+</section>
 
-    <button type="submit" class="button">Send Message</button>
-</form>
-
-
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 HappyPaws Transport. All rights reserved.</p>
-    </footer>
-
-    <!-- Prevent form resubmission on back button -->
-    <script>
-        if (window.history.replaceState) {
-            window.history.replaceState(null, null, window.location.href);
-        }
-    </script>
+<footer>
+    <p>© 2026 HappyPaws Transport. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
