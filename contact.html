@@ -40,22 +40,21 @@
         </p>
 
         <!-- Contact Form -->
-        <form action="https://formspree.io/f/mjgegzjb" method="POST" class="contact-form">
+ <form action="https://formspree.io/f/mjgegzjb" method="POST">
+    <p>You can send us a brief message so we can assist you.</p>
 
-            <!-- Redirect after submit -->
-            <input type="hidden" name="_next" value="https://larisar707.github.io/HappyPaw-my-site/thankyou.html">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Your Email" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit" class="button">Send Message</button>
+</form>
 
-            <button type="submit">Send Message</button>
-        </form>
     </section>
 
     <!-- Footer -->
