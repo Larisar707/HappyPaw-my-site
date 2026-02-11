@@ -1,36 +1,22 @@
- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HappyPaws Transport - Contact</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>HappyPaws Transport</h1>
-        <p>Safe  and  comfortable  transport  for  your  furry  friends</p>
-    </header>
+ <section>
+    <h2>Contact Us</h2>
+    <p>Phone: <a href="tel:+13477223531">(347) 722-3531</a></p>
+    <p>Email: <a href="mailto:larisa.slizewski707.com">larisa.slizewski707.com</a></p>
+    <a href="tel:+13477223531" class="button">Call Us</a>
 
- <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="contact.html">Contact</a>
-</nav>
+    <!-- Contact Form -->
+    <form action="https://formspree.io/f/mjgegzjb" method="POST" class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-    <section>
-        <h2>Contact Us</h2>
-        <p>Phone: <a href="tel:+13477223531">(347) 722-3531</a></p>
-        <p>Email: info@happypaws.com</p>
-        <a href="tel:+13477223531" class="button">Call Us</a>
-    </section>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
 
-    <footer>
-        <p>© 2026 HappyPaws Transport. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
 
 
