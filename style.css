@@ -1,3 +1,4 @@
+ /* Base Styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -6,8 +7,9 @@ body {
     line-height: 1.6;
 }
 
+/* Header */
 header {
-    background: linear-gradient(135deg,  #f093fb,  #f5576c);
+    background: linear-gradient(135deg, #f093fb, #f5576c);
     color: white;
     padding: 60px 20px;
     text-align: center;
@@ -23,6 +25,7 @@ header p {
     margin-top: 10px;
 }
 
+/* Navigation */
 nav {
     background-color: #333;
     display: flex;
@@ -41,6 +44,7 @@ nav a:hover {
     color: #333;
 }
 
+/* Section */
 section {
     padding: 60px 20px;
     text-align: center;
@@ -60,6 +64,7 @@ p {
     margin: auto;
 }
 
+/* Buttons */
 .button {
     display: inline-block;
     margin-top: 20px;
@@ -95,11 +100,6 @@ p {
   object-fit: cover;   /* crops if necessary, keeps image proportional */
 }
 
-
-
-
-
-
 /* Testimonials */
 .testimonial {
     max-width: 600px;
@@ -114,11 +114,53 @@ p {
     font-style: italic;
 }
 
+/* Footer */
 footer {
     background-color: #333;
     color: white;
     padding: 20px;
     text-align: center;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 500px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 12px;
+    background: linear-gradient(to right, #f093fb, #f5576c);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: linear-gradient(to right, #f5576c, #f093fb);
 }
 
 /* Mobile responsiveness */
@@ -134,5 +176,20 @@ footer {
     }
     .gallery img {
         max-width: 80%;
+    }
+    /* Contact Form Mobile */
+    .contact-form {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.9em;
+    }
+
+    .contact-form button {
+        font-size: 1em;
+        padding: 10px;
     }
 }
