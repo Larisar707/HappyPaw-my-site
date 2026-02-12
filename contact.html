@@ -5,20 +5,28 @@
     <title>Contact Us - HappyPaws Transport</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
     <style>
-        /* Contact page specific styling */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
         form {
             max-width: 500px;
             margin: 0 auto;
             display: flex;
-            flex-direction: column; /* vertical layout */
-            gap: 15px; /* spacing between inputs */
+            flex-direction: column;
+            gap: 15px;
+            text-align: left;
         }
+
         form label {
             font-weight: bold;
-            margin-bottom: 5px;
         }
-        form input, form textarea {
+
+        form input,
+        form textarea {
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -26,12 +34,29 @@
             width: 100%;
             box-sizing: border-box;
         }
+
         form textarea {
             min-height: 120px;
             resize: vertical;
         }
+
+        .button {
+            padding: 12px;
+            background-color: #f5576c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: #f093fb;
+        }
     </style>
 </head>
+
 <body>
 
 <header>
@@ -49,33 +74,55 @@
 
 <section>
     <h2>Contact Us</h2>
-        <p>Phone: <a href="tel:+13477223531">(347) 722-3531</a></p>
-        <p>Email: larisa.slizewski707@gmail.com</p>
-        <a href="tel:+13477223531" class="button">Call Us</a>
 
+    <form id="contact-form" action="https://formspree.io/f/mjgegzjb" method="POST">
 
- <form action="https://formspree.io/f/mjgegzjb" method="POST">
-    <input type="hidden" name="_next" value="thankyou.html">
+        <p>You can send us a brief message so we can assist you.</p>
 
-    <p>You can send us a brief message so we can assist you.</p>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
 
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="button">Send Message</button>
 
-    <button type="submit" class="button">Send Message</button>
-</form>
-
+    </form>
 </section>
 
 <footer>
     <p>© 2026 HappyPaws Transport. All rights reserved.</p>
 </footer>
+
+<script>
+document.getElementById("contact-form").addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const form = event.target;
+    const data = new FormData(form);
+
+    try {
+        const response = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            window.location.href = "thankyou.html";
+        } else {
+            alert("There was a problem submitting your form.");
+        }
+    } catch (error) {
+        alert("Network error. Please try again.");
+    }
+});
+</script>
 
 </body>
 </html>
